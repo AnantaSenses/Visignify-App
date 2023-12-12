@@ -2,6 +2,24 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,7 +31,43 @@
         android:theme="@style/Theme.Capstone"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".ObjectDetection.CameraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.ObjectDetectionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.WeatherActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.BatteryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.LocationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.CalculatorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.OCRReaderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.SplashAudioActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.ChooseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.HomeBlindActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.HomeDeafActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.OnboardingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,6 +75,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+        <service android:name=".data.GetDataLocation" /> <!-- To get location API we need to generate key -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAdz5sjzrAIjfg-L2pHZOqgjjpGN4vhkZM" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

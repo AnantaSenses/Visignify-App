@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".ui.HomeBlindActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/app_bar"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="40dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.6">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins"
+                    android:text="Hello"
+                    android:textColor="@color/yellow"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Welcome"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/wave_welcome" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <GridLayout
+        android:layout_width="350dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+
+        android:background="@color/white"
+        android:columnCount="2"
+        android:rowCount="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+        <LinearLayout
+            android:layout_width="131.3dp"
+            android:layout_height="157.57dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="26dp"
+            android:layout_marginTop="19dp"
+            android:layout_marginStart="27.5dp"
+            android:background="@drawable/feature_grid"
+            android:elevation="20dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/object_detection" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:lineHeight="17dp"
+                android:text="Object\nDetection"
+                android:textAlignment="center"
+                android:textColor="@color/grey2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="131.3dp"
+            android:layout_height="157.57dp"
+            android:layout_marginBottom="26dp"
+            android:background="@drawable/feature_grid"
+            android:elevation="20dp"
+            android:layout_marginTop="19dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/battery_information" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:lineHeight="17dp"
+                android:text="Battery\nInformation"
+                android:textAlignment="center"
+                android:textColor="@color/grey2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="131.3dp"
+            android:layout_height="157.57dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="26dp"
+            android:layout_marginStart="27.5dp"
+            android:background="@drawable/feature_grid"
+            android:elevation="20dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/ocr_reader" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:lineHeight="17dp"
+                android:text="OCR\nReader"
+                android:textAlignment="center"
+                android:textColor="@color/grey2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="131.3dp"
+            android:layout_height="157.57dp"
+            android:layout_marginBottom="26dp"
+            android:background="@drawable/feature_grid"
+            android:elevation="20dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/weather_information" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:lineHeight="17dp"
+                android:text="Weather\nInformation"
+                android:textAlignment="center"
+                android:textColor="@color/grey2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="131.3dp"
+            android:layout_height="157.57dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="26dp"
+            android:layout_marginStart="27.5dp"
+            android:background="@drawable/feature_grid"
+            android:elevation="20dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/calculator" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Calculator"
+                android:textColor="@color/grey2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="131.3dp"
+            android:layout_height="157.57dp"
+            android:layout_marginBottom="26dp"
+            android:background="@drawable/feature_grid"
+            android:elevation="20dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/maps" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:lineHeight="17dp"
+                android:text="Location\nInformation"
+                android:textAlignment="center"
+                android:textColor="@color/grey2" />
+        </LinearLayout>
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/voiceInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="1sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+
+</LinearLayout>

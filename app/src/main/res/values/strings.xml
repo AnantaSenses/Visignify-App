@@ -1,3 +1,24 @@
 <resources>
-    <string name="app_name">Capstone</string>
+    <string name="app_name">Visignify</string>
+    <string name="speech_prompt">say hello</string>
+    <string name="speech_not_supported">not supported</string>
+    <string name="editText_hint">Enter city name</string>
+    <string name="weather_img">weather image</string>
+    <string name="camera_error">This device doesn\'t support Camera2 API.</string>
+    <string name="batter_percentage">battery</string>
+    <string name="features">
+        say <b>Navigation</b> to navigate to the destination.
+        \n Say <b>Read </b> to read the  messages.
+        \n Say <b>Calculator </b> to perform mathematical calculations.
+        \n Say <b>time and date </b> to know the time and date.
+        \n Say <b>Battery </b> to know the battery status.
+        \n Say <b>Location </b> to get the current location.
+        \n Say <b>weather </b> to read the  weather details.
+        \n Say <b>Object detection</b> to detect  the object.
+        \n Say <b>Exit </b> to close the  application.
+    </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
 </resources>
