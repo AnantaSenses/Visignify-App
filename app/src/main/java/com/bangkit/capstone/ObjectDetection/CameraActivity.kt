@@ -14,12 +14,12 @@ import android.util.Size
 import android.view.View
 import android.view.WindowManager
 import android.widget.Toast
-import com.bangkit.capstone.ObjectDetection.fragment.CameraConnectionFragment2
+import com.bangkit.capstone.ObjectDetection.fragment.CameraConnectionFragment
 import com.bangkit.capstone.ObjectDetection.model.OverlayView
 import com.bangkit.capstone.R
 
 abstract class CameraActivity : AppCompatActivity(), ImageReader.OnImageAvailableListener,
-    CameraConnectionFragment2.ConnectionListener {
+    CameraConnectionFragment.ConnectionListener {
     private var handler: Handler? = null
     private var handlerThread: HandlerThread? = null
     private val sfx: MediaPlayer? = null
@@ -111,7 +111,7 @@ abstract class CameraActivity : AppCompatActivity(), ImageReader.OnImageAvailabl
     }
 
     private fun setFragment() {
-        val cameraConnectionFragment = CameraConnectionFragment2()
+        val cameraConnectionFragment = CameraConnectionFragment()
         cameraConnectionFragment.addConnectionListener(this)
 
 

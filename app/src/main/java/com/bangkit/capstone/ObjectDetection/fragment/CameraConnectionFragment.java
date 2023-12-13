@@ -60,7 +60,7 @@ public class CameraConnectionFragment extends Fragment {
         ORIENTATIONS.append(Surface.ROTATION_270, 180);
     }
 
-    private static final String LOGGING_TAG = CameraConnectionFragment2.class.getName();
+    private static final String LOGGING_TAG = CameraConnectionFragment.class.getName();
     private static final Size DESIRED_PREVIEW_SIZE = new Size(screenWidth, screenHeight);
 
     private static final int MINIMUM_PREVIEW_SIZE = 500;

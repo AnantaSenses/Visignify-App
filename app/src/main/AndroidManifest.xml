@@ -31,6 +31,21 @@
         android:theme="@style/Theme.Capstone"
         tools:targetApi="31">
         <activity
+            android:name=".ui.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.LearnSignActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.DeafNoteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.WeatherInformationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.SignDetectionActivity"
+            android:exported="false" />
+        <activity
             android:name=".ObjectDetection.CameraActivity"
             android:exported="false" />
         <activity
