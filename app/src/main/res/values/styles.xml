@@ -2,6 +2,5 @@
 <resources>
     <style name="Floating" parent="Widget.Design.FloatingActionButton">
         <item name="android:foreground">@drawable/floating_background</item>
-        <item name="fontFamily">@font/poppins_medium</item>
     </style>
 </resources>

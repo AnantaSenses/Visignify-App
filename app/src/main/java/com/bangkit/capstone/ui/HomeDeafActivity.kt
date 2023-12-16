@@ -2,40 +2,53 @@ package com.bangkit.capstone.ui
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import com.bangkit.capstone.R
+import com.bangkit.capstone.databinding.ActivityHomeDeafBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
 class HomeDeafActivity : AppCompatActivity() {
+
+    private lateinit var binding : ActivityHomeDeafBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home_deaf)
-        val buttonNavbar = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
-        buttonNavbar.background = null
+        binding = ActivityHomeDeafBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        replaceFragment(HomeDeafFragment())
 
-        val signDetectionCard = findViewById<LinearLayout>(R.id.sign_detection)
-        val weatherInformationCard = findViewById<LinearLayout>(R.id.weather_information)
-        val deafNoteCard = findViewById<LinearLayout>(R.id.deaf_note)
-        val learnSignCard = findViewById<LinearLayout>(R.id.learn_sign)
 
-        signDetectionCard.setOnClickListener {
-            val intentBlind = Intent(this, SignDetectionActivity::class.java)
+        val bottomNavbar = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
+        bottomNavbar.background = null
+
+
+
+        val floatButton = findViewById<FloatingActionButton>(R.id.float_button)
+
+        floatButton.setOnClickListener{
+            val intentBlind = Intent(this, ObjectDetectionActivity::class.java)
             startActivity(intentBlind)
         }
-        weatherInformationCard.setOnClickListener{
-            val intentDeaf = Intent(this, WeatherActivity::class.java)
-            startActivity(intentDeaf)
+
+
+        binding.bottomNavigationView.setOnItemSelectedListener {
+            when(it.itemId){
+                R.id.home -> replaceFragment(HomeDeafFragment())
+                R.id.settings -> replaceFragment(SettingsFragment())
+                else -> {
+                }
+            }
+            true
         }
-        deafNoteCard.setOnClickListener{
-            val intentDeaf = Intent(this, DeafNoteActivity::class.java)
-            startActivity(intentDeaf)
-        }
-        learnSignCard.setOnClickListener{
-            val intentDeaf = Intent(this, LearnSignActivity::class.java)
-            startActivity(intentDeaf)
-        }
+
+
+    }
+    private fun replaceFragment(fragment: Fragment){
+        val fragmentManager = supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.frame_layout, fragment)
+        fragmentTransaction.commit()
     }
 }

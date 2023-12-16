@@ -33,23 +33,23 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="301dp"
+        android:layout_height="432dp"
         android:layout_marginTop="24dp"
         app:cardCornerRadius="20dp"
-        app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
-        app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
 
-        <com.bangkit.capstone.ObjectDetection.model.AutoFitTextureView
-            android:id="@+id/texture"
-            android:layout_width="341dp"
-            android:layout_height="472dp" />
+        <com.bangkit.capstone.SignDetection.model.AutoFitTextureViewSign
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/texture" />
 
-        <com.bangkit.capstone.ObjectDetection.model.OverlayView
-            android:id="@+id/overlay"
-            android:layout_width="341dp"
-            android:layout_height="472dp" />
+        <com.bangkit.capstone.SignDetection.model.OverlayViewSign
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/overlay"/>
     </androidx.cardview.widget.CardView>
 
     <ImageView

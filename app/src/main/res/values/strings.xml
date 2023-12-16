@@ -17,7 +17,9 @@
         \n Say <b>Object detection</b> to detect  the object.
         \n Say <b>Exit </b> to close the  application.
     </string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="about">
+            Visignify is a unique, user-centric platform that offers a transformative solution by revolutionizing how individuals with disabilities communicate, access information, and engage with the world. This app includes features such as object, sign detection using machine learning, OCR for text-to-speech functionality, voice output for location, battery, weather information, navigation with maps, learn feature, and a "Deaf Note" feature.
+    </string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
 

@@ -12,14 +12,13 @@ import java.util.LinkedList
 
 class OverlayViewSign(context: Context?, attrs: AttributeSet?) :
     View(context, attrs) {
-    private val paint: Paint
+    private val paint: Paint = Paint()
     private val callbacks: MutableList<DrawCallback?> = LinkedList<DrawCallback?>()
     private var results: List<DetectionResultSign>? = null
     private val colors: List<Int>? = null
     private val resultsViewHeight: Float
 
     init {
-        paint = Paint()
         paint.color = Color.RED
         paint.style = Paint.Style.STROKE
         paint.textSize = TypedValue.applyDimension(

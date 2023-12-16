@@ -59,10 +59,10 @@ class SignDetectionActivity : CameraActivitySign(), ImageReader.OnImageAvailable
         textToSpeech = TextToSpeech(this) { status ->
             if (status != TextToSpeech.ERROR) {
                 textToSpeech!!.language = Locale.US
-                textToSpeech!!.speak("welcome to object detection", TextToSpeech.QUEUE_FLUSH, null)
+                textToSpeech!!.speak("welcome to sign detection", TextToSpeech.QUEUE_FLUSH, null)
             }
         }
-        frameLayout = findViewById(R.id.container)
+        frameLayout = findViewById(R.id.container_sign)
         frameLayout!!.setOnLongClickListener {
             finish()
             val i = Intent(applicationContext, HomeBlindActivity::class.java)
@@ -70,7 +70,7 @@ class SignDetectionActivity : CameraActivitySign(), ImageReader.OnImageAvailable
             startActivity(i)
             false
         }
-        val screenOrientation: Int = getWindowManager().getDefaultDisplay().rotation
+        val screenOrientation: Int = windowManager.getDefaultDisplay().rotation
         //Sensor orientation: 90, Screen orientation: 0
         sensorOrientation = rotation + screenOrientation
         Log.i(
@@ -133,7 +133,7 @@ class SignDetectionActivity : CameraActivitySign(), ImageReader.OnImageAvailable
                 } else {
                     Toast.makeText(
                         applicationContext,
-                        "move forward object is not present.",
+                        "move forward sign is not present.",
                         Toast.LENGTH_SHORT
                     ).show()
                 }

@@ -35,8 +35,8 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
-import com.bangkit.capstone.ObjectDetection.utils.ErrorDialog;
-import com.bangkit.capstone.ObjectDetection.model.AutoFitTextureView;
+import com.bangkit.capstone.SignDetection.utils.ErrorDialog;
+import com.bangkit.capstone.SignDetection.model.AutoFitTextureViewSign;
 import com.bangkit.capstone.R;
 
 import java.util.ArrayList;
@@ -69,7 +69,7 @@ public class CameraConnectionFragmentSign extends Fragment {
     private ImageReader.OnImageAvailableListener imageListener;
     private ConnectionListener cameraConnectionListener;
     private String cameraId;
-    private AutoFitTextureView textureView;
+    private AutoFitTextureViewSign textureView;
     private CameraCaptureSession captureSession;
     private CameraDevice cameraDevice;
     private Integer sensorOrientation;
@@ -87,7 +87,7 @@ public class CameraConnectionFragmentSign extends Fragment {
 
     @Override
     public void onViewCreated(final View view, final Bundle savedInstanceState) {
-        textureView = (AutoFitTextureView) view.findViewById(R.id.texture);
+        textureView = (AutoFitTextureViewSign) view.findViewById(R.id.texture);
     }
 
     @Override

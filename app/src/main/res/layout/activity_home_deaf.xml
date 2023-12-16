@@ -6,197 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".ui.HomeDeafActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/coordinator"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:background="@drawable/app_bar"
         app:layout_constraintTop_toTopOf="parent">
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_marginStart="40dp"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.6">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center|start">
-
-                <TextView
-                    android:id="@+id/textView1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins"
-                    android:text="Hello"
-                    android:textColor="@color/yellow"
-                    android:textSize="14sp" />
-
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_medium"
-                    android:text="Welcome"
-                    android:textColor="@color/white"
-                    android:textSize="18sp" />
-            </LinearLayout>
-
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="8dp"
-                app:srcCompat="@drawable/wave_welcome" />
-        </LinearLayout>
-
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <GridLayout
-        android:id="@+id/gridLayout"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:background="@color/white"
-        android:columnCount="2"
-        android:rowCount="2"
-        app:layout_constraintBottom_toTopOf="@+id/coordinator"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
-
-        <LinearLayout
-            android:id="@+id/sign_detection"
-            android:layout_width="131.3dp"
-            android:layout_height="157.57dp"
-            android:layout_marginStart="27.5dp"
-            android:layout_marginTop="19dp"
-            android:layout_marginEnd="30dp"
-            android:layout_marginBottom="26dp"
-            android:background="@drawable/feature_grid"
-            android:elevation="10dp"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="95dp"
-                android:layout_height="77dp"
-                android:src="@drawable/sign_detection" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:fontFamily="@font/poppins_semibold"
-                android:lineHeight="17dp"
-                android:text="Sign\nDetection"
-                android:textAlignment="textStart"
-                android:textColor="@color/grey2" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/weather_information"
-            android:layout_width="131.3dp"
-            android:layout_height="157.57dp"
-            android:layout_marginTop="19dp"
-            android:layout_marginBottom="26dp"
-            android:background="@drawable/feature_grid"
-            android:elevation="10dp"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="95dp"
-                android:layout_height="77dp"
-                android:src="@drawable/weather_information" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:fontFamily="@font/poppins_semibold"
-                android:lineHeight="17dp"
-                android:text="Weather\nInformation"
-                android:textAlignment="textStart"
-                android:textColor="@color/grey2" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/deaf_note"
-            android:layout_width="131.3dp"
-            android:layout_height="157.57dp"
-            android:layout_marginStart="27.5dp"
-            android:layout_marginEnd="30dp"
-            android:layout_marginBottom="26dp"
-            android:background="@drawable/feature_grid"
-            android:elevation="10dp"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="81dp"
-                android:layout_height="97dp"
-                android:src="@drawable/deaf_note" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:fontFamily="@font/poppins_semibold"
-                android:lineHeight="17dp"
-                android:text="Deaf Note"
-                android:textAlignment="textStart"
-                android:textColor="@color/grey2" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/learn_sign"
-            android:layout_width="131.3dp"
-            android:layout_height="157.57dp"
-            android:layout_marginBottom="26dp"
-            android:background="@drawable/feature_grid"
-            android:elevation="10dp"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="110dp"
-                android:layout_height="57dp"
-                android:layout_marginTop="30dp"
-                android:src="@drawable/learn_sign" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="10dp"
-                android:fontFamily="@font/poppins_semibold"
-                android:lineHeight="17dp"
-                android:text="Learn Sign"
-                android:textAlignment="textStart"
-                android:textColor="@color/grey2" />
-
-        </LinearLayout>
-    </GridLayout>
+    </FrameLayout>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:id="@+id/coordinator"
@@ -224,15 +44,16 @@
                 android:background="@android:color/transparent"
                 app:itemIconTint="@color/icons_color"
                 app:itemTextColor="@color/icons_color"
-                app:menu="@menu/bottom_nav_menu"/>
+                app:menu="@menu/bottom_nav_menu" />
 
         </com.google.android.material.bottomappbar.BottomAppBar>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/float_button"
             style="@style/Floating"
-            android:backgroundTint="@color/yellow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/yellow"
             app:layout_anchor="@+id/bottom_app_bar"
             app:maxImageSize="30dp" />
     </androidx.coordinatorlayout.widget.CoordinatorLayout>

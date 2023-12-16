@@ -32,19 +32,13 @@ import java.util.Locale
 
 
 class ChooseActivity : AppCompatActivity() {
-//    private var fusedLocationClient: FusedLocationProviderClient? =
-//        null //One of the location APIs in google play services
-//    private var addressResultReceiver: LocationAddressResultReceiver? =
-//        null //receives the address results
 
     @SuppressLint("StaticFieldLeak")
-    private var currentLocation: Location? = null
-//    private lateinit var locationCallback: LocationCallback
     private var mVoiceInputTv: TextView? = null
-    var x1 = 0f
-    var x2 = 0f
-    var y1 = 0f
-    var y2 = 0f
+    private var x1 = 0f
+    private var x2 = 0f
+    private var y1 = 0f
+    private var y2 = 0f
     private var sfx: MediaPlayer? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,15 +47,6 @@ class ChooseActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
             WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
         )
-//        addressResultReceiver = LocationAddressResultReceiver(Handler())
-//        fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
-//        locationCallback = object : LocationCallback() {
-//            override fun onLocationResult(locationResult: LocationResult) {
-//                currentLocation = locationResult.getLocations().get(0)
-//                address
-//            }
-//        }
-//        startLocationUpdates() //call this function to check location permission
         if (checkIfAlreadyhavePermission()) {
             Toast.makeText(applicationContext, "Permission is granted", Toast.LENGTH_SHORT).show()
         } else {
@@ -92,53 +77,6 @@ class ChooseActivity : AppCompatActivity() {
         mVoiceInputTv = findViewById<View>(R.id.voice_input) as TextView
     }
 
-//    private fun startLocationUpdates() {
-//        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) !=
-//            PackageManager.PERMISSION_GRANTED
-//        ) {
-//            ActivityCompat.requestPermissions(
-//                this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
-//                LOCATION_PERMISSION_REQUEST_CODE
-//            )
-//        } else {
-//            val locationRequest = LocationRequest()
-//            locationRequest.setInterval(10000)
-//            locationRequest.setFastestInterval(10000)
-//            locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
-//            locationCallback?.let {
-//                fusedLocationClient?.requestLocationUpdates(locationRequest,
-//                    it, null)
-//            }
-//        }
-//    }
-
-//    private val address: Unit
-//        private get() {
-//            if (!Geocoder.isPresent()) {
-//                //            Toast.makeText(Home.this, "Can't find current address, ",
-//                //                    Toast.LENGTH_SHORT).show();
-//                return
-//            }
-//            val intent = Intent(this, GetDataLocation::class.java)
-//            intent.putExtra("add_receiver", addressResultReceiver)
-//            intent.putExtra("add_location", currentLocation)
-//            startService(intent)
-//        }
-
-//    override fun onRequestPermissionsResult(
-//        requestCode: Int,
-//        permissions: Array<String>,
-//        grantResults: IntArray
-//    ) {
-//        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-//        if (requestCode == LOCATION_PERMISSION_REQUEST_CODE) {
-//            if (grantResults.size > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-//                startLocationUpdates()
-//            } else {
-////                Toast.makeText(this, "Location permission not granted, " + "restart the app if you want the feature", Toast.LENGTH_SHORT).show();
-//            }
-//        }
-//    }
 
     private fun checkIfAlreadyhavePermission(): Boolean {
         val result = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_SMS)
@@ -286,8 +224,8 @@ class ChooseActivity : AppCompatActivity() {
         private const val LOCATION_PERMISSION_REQUEST_CODE =
             2 //Request Code is used to check which permission called this function. // This request code is provided when the user is prompt for permission.
         private const val REQ_CODE_SPEECH_INPUT = 100
-        private var firstTime = 0
-        private var textToSpeech: TextToSpeech? = null
+        var firstTime = 0
+        var textToSpeech: TextToSpeech? = null
         var Readmessage: String? = null
         var name: String? = null
         private var currentAdd: String? = null

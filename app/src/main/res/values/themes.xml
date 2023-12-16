@@ -6,4 +6,10 @@
     </style>
 
     <style name="Theme.Capstone" parent="Base.Theme.Capstone" />
+
+    <style name="nightModeSwitch" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">@color/yellow</item>
+        <item name="colorSwitchThumbNormal">@color/white</item>
+        <item name="android:colorForeground">@color/yellow</item>
+    </style>
 </resources>
