@@ -11,5 +11,12 @@
         <item name="colorControlActivated">@color/yellow</item>
         <item name="colorSwitchThumbNormal">@color/white</item>
         <item name="android:colorForeground">@color/yellow</item>
+
     </style>
+
+    <style name="SearchViewHint" parent="TextAppearance.AppCompat">
+        <item name="android:textColorHint">@color/white</item>
+        <item name="android:editTextColor">@android:color/white</item>
+    </style>
+
 </resources>

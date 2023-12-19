@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:background="@color/white"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <EditText
+                    android:id="@+id/etNoteTitleUpdate"
+                    android:padding="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="320dp"
+                    android:background="@drawable/note_rounded"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:padding="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/clear_btn"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:background="@drawable/rounded_note_btn"
+                        android:layout_marginStart="0dp"
+                        android:text="Clear"
+                        android:textColor="@color/white"
+                        android:textAllCaps="false"
+                        android:textSize="16sp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="0dp" />
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/fab_done"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:text="Save"
+                        android:textColor="@color/white"
+                        android:textAllCaps="false"
+                        android:textSize="16sp"
+                        android:background="@drawable/rounded_note_btn"
+                        android:layout_toEndOf="@+id/clear_btn" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fab_delete"
+                        android:layout_width="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:backgroundTint="#2C1F63"
+                        android:contentDescription="image"
+                        app:tint="@color/yellow"
+                        app:fabSize="normal"
+                        android:src="@drawable/ic_delete" />
+
+
+                </RelativeLayout>
+                <!--                <LinearLayout-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:orientation="horizontal">-->
+
+                <!--                    <com.google.android.material.button.MaterialButton-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"/>-->
+
+                <!--                    <com.google.android.material.button.MaterialButton-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"/>-->
+
+                <!--                    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+                <!--                        android:id="@+id/fab_done"-->
+                <!--                        android:layout_width="wrap_content"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginEnd="24dp"-->
+
+                <!--                        android:backgroundTint="@color/colorPrimary"-->
+                <!--                        android:clickable="true"-->
+                <!--                        android:contentDescription="@string/bersyte"-->
+                <!--                        android:src="@drawable/ic_done"-->
+                <!--                        android:tintMode="@color/white"-->
+                <!--                        app:borderWidth="0dp"-->
+                <!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--                        app:layout_constraintEnd_toEndOf="parent" />-->
+                <!--                </LinearLayout>-->
+
+                <EditText
+                    android:id="@+id/etNoteBodyUpdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/rounded_note_message"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:hint="Type something..."
+                    android:inputType="textMultiLine"
+                    android:textColor="@color/black"
+                    android:textColorHint="#928E8E"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -24,8 +24,8 @@ import java.util.Map;
 import java.util.Vector;
 
 public class MobileNetObjDetectorSign {
-    private static final String MODEL_FILENAME = "detect.tflite";
-    private static final String LABEL_FILENAME = "labelmap.txt";
+    private static final String MODEL_FILENAME = "sign_detect.tflite";
+    private static final String LABEL_FILENAME = "label_sign.txt";
     private static final int INPUT_SIZE = 300;
     private static final int NUM_BYTES_PER_CHANNEL = 1;
     private static final float IMAGE_MEAN = 128.0f;
