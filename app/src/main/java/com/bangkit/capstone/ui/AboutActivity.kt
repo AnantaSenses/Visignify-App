@@ -15,8 +15,7 @@ class AboutActivity : AppCompatActivity() {
         val arrowBack = findViewById<ImageView>(R.id.arrow_back)
 
         arrowBack.setOnClickListener{
-            val intentBlind = Intent(this,HomeDeafActivity::class.java)
-            startActivity(intentBlind)
+            finish()
         }
     }
 }

@@ -31,7 +31,7 @@ class HomeDeafFragment : Fragment() {
             startActivity(intentBlind)
         }
         weatherInformationCard.setOnClickListener{
-            val intentDeaf = Intent(context, WeatherActivity::class.java)
+            val intentDeaf = Intent(context, WeatherInformationActivity::class.java)
             startActivity(intentDeaf)
         }
         deafNoteCard.setOnClickListener{

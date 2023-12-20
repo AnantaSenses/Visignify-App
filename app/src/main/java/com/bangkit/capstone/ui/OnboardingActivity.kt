@@ -68,7 +68,7 @@ class OnboardingActivity : AppCompatActivity() {
                 ChooseActivity.textToSpeech!!.language = Locale.US
                 ChooseActivity.textToSpeech!!.setSpeechRate(1f)
                 if (ChooseActivity.firstTime == 0) ChooseActivity.textToSpeech!!.speak(
-                    "Welcome to Vision App. Swipe right to use the blind features. And swipe left and say what you want",
+                    "Swipe right to use the blind features. And swipe left and say what you want",
                     TextToSpeech.QUEUE_FLUSH,
                     null
                 )

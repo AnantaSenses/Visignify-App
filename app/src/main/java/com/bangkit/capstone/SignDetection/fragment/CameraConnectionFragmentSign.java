@@ -32,6 +32,7 @@ import android.view.Surface;
 import android.view.TextureView;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
@@ -87,7 +88,15 @@ public class CameraConnectionFragmentSign extends Fragment {
 
     @Override
     public void onViewCreated(final View view, final Bundle savedInstanceState) {
-        textureView = (AutoFitTextureViewSign) view.findViewById(R.id.texture);
+        textureView = view.findViewById(R.id.texture);
+        ImageView arrowBack = view.findViewById(R.id.arrow_back_sign_detection);
+
+        arrowBack.setOnClickListener(v -> {
+            if (getFragmentManager() != null) {
+                getFragmentManager().popBackStack();
+            }
+        });
+
     }
 
     @Override

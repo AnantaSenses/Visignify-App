@@ -31,7 +31,7 @@
         android:theme="@style/Theme.Capstone"
         tools:targetApi="31">
         <activity
-            android:name=".ui.SettingsActivity"
+            android:name=".ui.LearnSignDetailActivity"
             android:exported="false" />
         <activity
             android:name=".ui.AboutActivity"

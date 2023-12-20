@@ -2,7 +2,9 @@ package com.bangkit.capstone.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
 import androidx.lifecycle.ViewModelProvider
+import com.bangkit.capstone.R
 import com.bangkit.capstone.databinding.ActivityDeafNoteBinding
 import com.bangkit.capstone.db.NoteDatabase
 import com.bangkit.capstone.repository.NoteRepository
@@ -19,6 +21,11 @@ class DeafNoteActivity : AppCompatActivity() {
         binding = ActivityDeafNoteBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val arrowBack = findViewById<ImageView>(R.id.arrow_back_deaf_note)
+
+        arrowBack.setOnClickListener{
+            finish()
+        }
         setUpViewModel()
     }
 
