@@ -3,6 +3,7 @@
     <style name="Base.Theme.Capstone" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:actionBarWidgetTheme">@style/SearchViewHint</item>
     </style>
 
     <style name="Theme.Capstone" parent="Base.Theme.Capstone" />
@@ -14,7 +15,7 @@
 
     </style>
 
-    <style name="SearchViewHint" parent="TextAppearance.AppCompat">
+    <style name="SearchViewHint" parent="@android:style/Theme.Holo">
         <item name="android:textColorHint">@color/white</item>
         <item name="android:editTextColor">@android:color/white</item>
     </style>

@@ -21,6 +21,7 @@ class DeafNoteActivity : AppCompatActivity() {
         binding = ActivityDeafNoteBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         val arrowBack = findViewById<ImageView>(R.id.arrow_back_deaf_note)
 
         arrowBack.setOnClickListener{

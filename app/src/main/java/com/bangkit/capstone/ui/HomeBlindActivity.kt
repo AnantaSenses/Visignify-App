@@ -36,7 +36,7 @@ class HomeBlindActivity : AppCompatActivity() {
                 textToSpeech!!.language = Locale.US
                 textToSpeech!!.setSpeechRate(1f)
                 textToSpeech!!.speak(
-                    "Our Visignify App comes with some unique feature. You can use it by saying Object. Reading. Calculator. Time and Date. Weather. Battery. Location. and Exit. Swipe left and say what you want ",
+                    "Our Visignify App comes with some unique feature. You can use it by saying Object. Reading. Calculator. Weather. Battery. Location. and Exit. Swipe left and say what you want ",
                     TextToSpeech.QUEUE_FLUSH,
                     null
                 )
@@ -73,7 +73,7 @@ class HomeBlindActivity : AppCompatActivity() {
             RecognizerIntent.LANGUAGE_MODEL_FREE_FORM
         )
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault())
-        intent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Hello, How can I help you?")
+//        intent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Hello, How can I help you?")
         try {
             startActivityForResult(intent, REQ_CODE_SPEECH_INPUT)
         } catch (a: ActivityNotFoundException) {
@@ -115,14 +115,14 @@ class HomeBlindActivity : AppCompatActivity() {
                     val intent = Intent(applicationContext, LocationActivity::class.java)
                     startActivity(intent)
                     mVoiceInputTv.setText(null)
-                } else if (mVoiceInputTv!!.text.toString().contains("exit")) {
-                    textToSpeech!!.speak("Closing the App", TextToSpeech.QUEUE_FLUSH, null)
-                    val timer = Handler()
-                    timer.postDelayed({
-                        onPause()
-                        finishAffinity()
-                        System.exit(0)
-                    }, 2000)
+//                } else if (mVoiceInputTv!!.text.toString().contains("exit")) {
+//                    textToSpeech!!.speak("Closing the App", TextToSpeech.QUEUE_FLUSH, null)
+//                    val timer = Handler()
+//                    timer.postDelayed({
+//                        onPause()
+//                        finishAffinity()
+//                        System.exit(0)
+//                    }, 2000)
                 } else {
                     textToSpeech!!.speak(
                         "Do not understand. Tap on the screen Say again",

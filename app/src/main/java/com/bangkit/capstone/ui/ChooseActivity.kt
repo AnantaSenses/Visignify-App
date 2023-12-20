@@ -62,7 +62,7 @@ class ChooseActivity : AppCompatActivity() {
                 textToSpeech!!.language = Locale.US
                 textToSpeech!!.setSpeechRate(1f)
                 if (firstTime == 0) textToSpeech!!.speak(
-                    "Welcome to Vision App. Swipe right to listen the features of the app. And swipe left and say what you want",
+                    "Swipe right to listen the features of the app. And swipe left and say what you want",
                     TextToSpeech.QUEUE_FLUSH,
                     null
                 )
@@ -121,7 +121,7 @@ class ChooseActivity : AppCompatActivity() {
             RecognizerIntent.LANGUAGE_MODEL_FREE_FORM
         )
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault())
-        intent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Hello, How can I help you?")
+//        intent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Hello, How can I help you?")
         try {
             startActivityForResult(intent, REQ_CODE_SPEECH_INPUT)
         } catch (a: ActivityNotFoundException) {
@@ -135,14 +135,14 @@ class ChooseActivity : AppCompatActivity() {
             if (resultCode == RESULT_OK && null != data) {
                 val result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS)
                 mVoiceInputTv!!.text = result!![0]
-                if (mVoiceInputTv!!.text.toString().contains("exit")) {
-                    textToSpeech!!.speak("Closing the App", TextToSpeech.QUEUE_FLUSH, null)
-                    val timer = Handler()
-                    timer.postDelayed({
-                        finishAffinity()
-                        System.exit(0)
-                    }, 2000)
-                } else if (mVoiceInputTv!!.text.toString().contains("read")) {
+//                if (mVoiceInputTv!!.text.toString().contains("exit")) {
+//                    textToSpeech!!.speak("Closing the App", TextToSpeech.QUEUE_FLUSH, null)
+//                    val timer = Handler()
+//                    timer.postDelayed({
+//                        finishAffinity()
+//                        System.exit(0)
+//                    }, 2000)
+                if (mVoiceInputTv!!.text.toString().contains("read")) {
                     val intent = Intent(applicationContext, OCRReaderActivity::class.java)
                     startActivity(intent)
                     mVoiceInputTv!!.setText(null)
@@ -167,11 +167,11 @@ class ChooseActivity : AppCompatActivity() {
                     intent.putExtra("location", currentAdd)
                     startActivity(intent)
                     mVoiceInputTv!!.setText(null)
-                } else if (mVoiceInputTv!!.text.toString().contains("exit")) {
-                    textToSpeech!!.speak("Closing the App", TextToSpeech.QUEUE_FLUSH, null)
-                    mVoiceInputTv!!.setText(null)
-                    val timer = Handler()
-                    timer.postDelayed({ finishAffinity() }, 5000)
+//                } else if (mVoiceInputTv!!.text.toString().contains("exit")) {
+//                    textToSpeech!!.speak("Closing the App", TextToSpeech.QUEUE_FLUSH, null)
+//                    mVoiceInputTv!!.setText(null)
+//                    val timer = Handler()
+//                    timer.postDelayed({ finishAffinity() }, 5000)
                 } else {
                     textToSpeech!!.speak(
                         "Do not understand. Swipe left Say again",

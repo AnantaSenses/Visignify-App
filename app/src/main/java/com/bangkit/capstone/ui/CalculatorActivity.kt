@@ -198,9 +198,9 @@ class CalculatorActivity : AppCompatActivity() {
                         .getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS)
                     var change = result.toString()
                     txtInput!!.text = result!![0]
-                    if (txtInput!!.text.toString().contains("read")) {
-                        val intent = Intent(applicationContext, OCRReaderActivity::class.java)
-                        startActivity(intent)
+//                    if (txtInput!!.text.toString().contains("read")) {
+//                        val intent = Intent(applicationContext, OCRReaderActivity::class.java)
+//                        startActivity(intent)
 //                    } else if (txtInput!!.text.toString().contains("weather")) {
 //                        val intent = Intent(applicationContext, Weather::class.java)
 //                        startActivity(intent)
@@ -216,14 +216,9 @@ class CalculatorActivity : AppCompatActivity() {
 //                        val intent = Intent(applicationContext, Battery::class.java)
 //                        startActivity(intent)
 //                        txtInput.setText(null)
-                    } else if (txtInput!!.text.toString().contains("exit")) {
-                        textToSpeech!!.speak("Closing the App", TextToSpeech.QUEUE_FLUSH, null)
-                        val timer = Handler()
-                        timer.postDelayed({
+                    if (txtInput!!.text.toString().contains("exit")) {
+                        textToSpeech!!.speak("Closing the Calculator", TextToSpeech.QUEUE_FLUSH, null)
                             finish()
-                            finishAffinity()
-                            super.onPause()
-                        }, 2000)
                     } else {
                         textToSpeech!!.speak(
                             "Do not understand. Tap on the screen Say again",

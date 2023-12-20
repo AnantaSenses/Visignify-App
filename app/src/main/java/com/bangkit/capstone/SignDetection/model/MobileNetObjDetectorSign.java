@@ -26,11 +26,11 @@ import java.util.Vector;
 public class MobileNetObjDetectorSign {
     private static final String MODEL_FILENAME = "sign_detect.tflite";
     private static final String LABEL_FILENAME = "label_sign.txt";
-    private static final int INPUT_SIZE = 300;
+    private static final int INPUT_SIZE = 416;
     private static final int NUM_BYTES_PER_CHANNEL = 1;
     private static final float IMAGE_MEAN = 128.0f;
     private static final float IMAGE_STD = 128.0f;
-    private static final int NUM_DETECTIONS = 10;
+    private static final int NUM_DETECTIONS = 10647;
     private static final String LOGGING_TAG = MobileNetObjDetectorSign.class.getName();
 
     private ByteBuffer imgData;
@@ -47,10 +47,10 @@ public class MobileNetObjDetectorSign {
     }
 
     private void init(final AssetManager assetManager) throws IOException {
-        imgData = ByteBuffer.allocateDirect(1 * INPUT_SIZE * INPUT_SIZE * 3 * NUM_BYTES_PER_CHANNEL);
+        imgData = ByteBuffer.allocateDirect(1 * INPUT_SIZE * INPUT_SIZE * 12 * NUM_BYTES_PER_CHANNEL);
         imgData.order(ByteOrder.nativeOrder());
         intValues = new int[INPUT_SIZE * INPUT_SIZE];
-        outputLocations = new float[1][NUM_DETECTIONS][4];
+        outputLocations = new float[1][NUM_DETECTIONS][52];
         outputClasses = new float[1][NUM_DETECTIONS];
         outputScores = new float[1][NUM_DETECTIONS];
         numDetections = new float[1];
@@ -124,9 +124,9 @@ public class MobileNetObjDetectorSign {
         Object[] inputArray = {imgData};
         Map<Integer, Object> outputMap = new HashMap<>();
         outputMap.put(0, outputLocations);
-        outputMap.put(1, outputClasses);
-        outputMap.put(2, outputScores);
-        outputMap.put(3, numDetections);
+//        outputMap.put(1, outputClasses);
+//        outputMap.put(2, outputScores);
+//        outputMap.put(3, numDetections);
         tfLite.runForMultipleInputsOutputs(inputArray, outputMap);
 
         final ArrayList<DetectionResultSign> recognitions = new ArrayList<>(NUM_DETECTIONS);
@@ -145,7 +145,6 @@ public class MobileNetObjDetectorSign {
                         outputScores[0][i],
                         detection));
             }
-
         }
         return recognitions;
     }

@@ -60,7 +60,7 @@ class BatteryActivity : AppCompatActivity() {
                         null
                     )
                     textToSpeech!!.speak(
-                        "swipe left to listen again or swipe right to return back in main menu",
+                        "swipe right to listen again or swipe left to return back in main menu",
                         TextToSpeech.QUEUE_ADD,
                         null
                     )
@@ -71,7 +71,7 @@ class BatteryActivity : AppCompatActivity() {
                         null
                     )
                     textToSpeech!!.speak(
-                        "swipe left to listen again or swipe right to return back in main menu",
+                        "swipe right to listen again or swipe left to return back in main menu",
                         TextToSpeech.QUEUE_ADD,
                         null
                     )
