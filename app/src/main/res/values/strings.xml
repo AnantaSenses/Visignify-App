@@ -1,3 +1,84 @@
 <resources>
-    <string name="app_name">Capstone</string>
+    <string name="app_name">Visignify</string>
+    <string name="speech_prompt">say hello</string>
+    <string name="speech_not_supported">not supported</string>
+    <string name="editText_hint">Enter city name</string>
+    <string name="weather_img">weather image</string>
+    <string name="camera_error">This device doesn\'t support Camera2 API.</string>
+    <string name="batter_percentage">battery</string>
+    <string name="features">
+        say <b>Navigation</b> to navigate to the destination.
+        \n Say <b>Read </b> to read the  messages.
+        \n Say <b>Calculator </b> to perform mathematical calculations.
+        \n Say <b>time and date </b> to know the time and date.
+        \n Say <b>Battery </b> to know the battery status.
+        \n Say <b>Location </b> to get the current location.
+        \n Say <b>weather </b> to read the  weather details.
+        \n Say <b>Object detection</b> to detect  the object.
+        \n Say <b>Exit </b> to close the  application.
+    </string>
+    <string name="about">
+            Visignify is a unique, user-centric platform that offers a transformative solution by revolutionizing how individuals with disabilities communicate, access information, and engage with the world. This app includes features such as object, sign detection using machine learning, OCR for text-to-speech functionality, voice output for location, battery, weather information, navigation with maps, learn feature, and a "Deaf Note" feature.
+    </string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="data_alphabet">
+        <item>Aa</item>
+        <item>Bb</item>
+        <item>Cc</item>
+        <item>Dd</item>
+        <item>Ee</item>
+        <item>Ff</item>
+        <item>Gg</item>
+        <item>Hh</item>
+        <item>Ii</item>
+        <item>Jj</item>
+        <item>Kk</item>
+        <item>Ll</item>
+        <item>Mm</item>
+        <item>Nn</item>
+        <item>Oo</item>
+        <item>Pp</item>
+        <item>Qq</item>
+        <item>Rr</item>
+        <item>Ss</item>
+        <item>Tt</item>
+        <item>Uu</item>
+        <item>Vv</item>
+        <item>Ww</item>
+        <item>Xx</item>
+        <item>Yy</item>
+        <item>Zz</item>
+    </string-array>
+
+    <integer-array name="data_photo">
+        <item>@drawable/bisindo_letter_a</item>
+        <item>@drawable/bisindo_letter_b</item>
+        <item>@drawable/bisindo_letter_c</item>
+        <item>@drawable/bisindo_letter_d</item>
+        <item>@drawable/bisindo_letter_e</item>
+        <item>@drawable/bisindo_letter_f</item>
+        <item>@drawable/bisindo_letter_g</item>
+        <item>@drawable/bisindo_letter_h</item>
+        <item>@drawable/bisindo_letter_i</item>
+        <item>@drawable/bisindo_letter_j</item>
+        <item>@drawable/bisindo_letter_k</item>
+        <item>@drawable/bisindo_letter_l</item>
+        <item>@drawable/bisindo_letter_m</item>
+        <item>@drawable/bisindo_letter_n</item>
+        <item>@drawable/bisindo_letter_o</item>
+        <item>@drawable/bisindo_letter_p</item>
+        <item>@drawable/bisindo_letter_q</item>
+        <item>@drawable/bisindo_letter_r</item>
+        <item>@drawable/bisindo_letter_s</item>
+        <item>@drawable/bisindo_letter_t</item>
+        <item>@drawable/bisindo_letter_u</item>
+        <item>@drawable/bisindo_letter_v</item>
+        <item>@drawable/bisindo_letter_w</item>
+        <item>@drawable/bisindo_letter_x</item>
+        <item>@drawable/bisindo_letter_y</item>
+        <item>@drawable/bisindo_letter_z</item>
+    </integer-array>
+
+
 </resources>
