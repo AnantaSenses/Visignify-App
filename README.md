@@ -1,7 +1,7 @@
 <h1 align="center">Visignify App</h1> <br>
 <p align="center">
-  <a href="https://github.com/AnantaSenses/Visignify-App/blob/main/Banner%20Visignify.png">
-    <img alt="Visignify" title="Visignify" src="https://github.com/AnantaSenses/Visignify-App/blob/main/Banner%20Visignify.png" width="500">
+  <a href="https://github.com/AnantaSenses/Visignify-App/blob/rozzaq/Banner%20Visignify%20revisi.png">
+    <img alt="Visignify" title="Visignify" src="https://github.com/AnantaSenses/Visignify-App/blob/rozzaq/Banner%20Visignify%20revisi.png" width="500">
   </a>
 </p>
 
