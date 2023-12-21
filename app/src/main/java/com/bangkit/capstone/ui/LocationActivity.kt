@@ -143,7 +143,7 @@ class LocationActivity : AppCompatActivity() {
             MotionEvent.ACTION_DOWN -> x1 = touchEvent.x
             MotionEvent.ACTION_UP -> {
                 x2 = touchEvent.x
-                if (x1 < x2) {
+                if (x1 > x2) { //swipe left
                     sfx.start()
                     if (currentAddTv!!.text.toString().isEmpty()) {
                         textToSpeech!!.speak(
@@ -164,7 +164,7 @@ class LocationActivity : AppCompatActivity() {
                         )
                     }
                 }
-                if (x1 > x2) {
+                if (x1 < x2) { //swipe right
                     sfx.start()
                     val i = Intent(this@LocationActivity, HomeBlindActivity::class.java)
                     startActivity(i)

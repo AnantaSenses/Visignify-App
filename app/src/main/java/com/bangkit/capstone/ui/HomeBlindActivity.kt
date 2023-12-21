@@ -5,6 +5,7 @@ import android.content.Intent
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import android.speech.RecognizerIntent
 import android.speech.tts.TextToSpeech
 import android.view.MotionEvent
@@ -61,6 +62,10 @@ class HomeBlindActivity : AppCompatActivity() {
                     textToSpeech!!.stop()
                     startVoiceInput()
                 }
+                if (x1 < x2) { //swipe right
+                    sfx.start()
+                    finish()
+                }
             }
         }
         return false
@@ -115,14 +120,9 @@ class HomeBlindActivity : AppCompatActivity() {
                     val intent = Intent(applicationContext, LocationActivity::class.java)
                     startActivity(intent)
                     mVoiceInputTv.setText(null)
-//                } else if (mVoiceInputTv!!.text.toString().contains("exit")) {
-//                    textToSpeech!!.speak("Closing the App", TextToSpeech.QUEUE_FLUSH, null)
-//                    val timer = Handler()
-//                    timer.postDelayed({
-//                        onPause()
-//                        finishAffinity()
-//                        System.exit(0)
-//                    }, 2000)
+                } else if (mVoiceInputTv!!.text.toString().contains("exit")) {
+                    textToSpeech!!.speak("Closing the Blind Feature", TextToSpeech.QUEUE_FLUSH, null)
+                    finish()
                 } else {
                     textToSpeech!!.speak(
                         "Do not understand. Tap on the screen Say again",

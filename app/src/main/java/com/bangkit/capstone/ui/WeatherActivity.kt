@@ -124,12 +124,8 @@ class WeatherActivity : AppCompatActivity() {
                         val intent = Intent(applicationContext, CalculatorActivity::class.java)
                         startActivity(intent)
                     } else if (cityInput!!.text.toString().contains("exit")) {
-                        textToSpeech!!.speak("Closing the App", TextToSpeech.QUEUE_FLUSH, null)
-                        val timer = Handler()
-                        timer.postDelayed({
-                            onPause()
-                            finishAffinity()
-                        }, 2000)
+                        textToSpeech!!.speak("Closing the feature", TextToSpeech.QUEUE_FLUSH, null)
+                        finish()
                     } else {
                         api_url(cityInput!!.text.toString())
                     }

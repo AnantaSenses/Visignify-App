@@ -266,25 +266,21 @@ class CalculatorActivity : AppCompatActivity() {
                     val i = Intent(this@CalculatorActivity, HomeBlindActivity::class.java)
                     startActivity(i)
                 } else {
-                    if (x1 > x2) {
-                        val i = Intent(this@CalculatorActivity, HomeBlindActivity::class.java)
-                        startActivity(i)
-                    }
                 }
             }
         }
         return false
     }
 
-    override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
-        if (keyCode == KeyEvent.KEYCODE_VOLUME_UP) {
-            val intent = Intent(applicationContext, HomeBlindActivity::class.java)
-            startActivity(intent)
-            val handler = Handler(Looper.getMainLooper())
-            handler.postDelayed({ }, 1000)
-        }
-        return true
-    }
+//    override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
+//        if (keyCode == KeyEvent.KEYCODE_VOLUME_UP) {
+//            val intent = Intent(applicationContext, HomeBlindActivity::class.java)
+//            startActivity(intent)
+//            val handler = Handler(Looper.getMainLooper())
+//            handler.postDelayed({ }, 1000)
+//        }
+//        return true
+//    }
 
     public override fun onDestroy() {
         if (txtInput!!.text.toString() == "exit") {
