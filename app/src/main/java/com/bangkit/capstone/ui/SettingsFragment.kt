@@ -33,6 +33,12 @@ class SettingsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val arrowBack = view.findViewById<ImageView>(R.id.arrow_back_settings)
+
+        arrowBack.setOnClickListener{
+            getFragmentManager()?.popBackStack()
+        }
     }
 
 
